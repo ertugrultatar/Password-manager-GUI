@@ -1,4 +1,3 @@
-# ---------------------------- PASSWORD GENERATOR ------------------------------- #
 import random
 from tkinter import messagebox
 from random import  randint, shuffle
@@ -8,6 +7,8 @@ import pyperclip
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+
+# ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 def generate_password():
     password_letters = [random.choice(letters) for _ in range(randint(8,10))]
@@ -47,8 +48,6 @@ def save():
 # ---------------------------- UI SETUP ------------------------------- #
 
 from tkinter import *
-
-from pandas.core.computation.align import align_terms
 
 window = Tk()
 window.title("Password Manager")
