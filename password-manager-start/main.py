@@ -50,18 +50,15 @@ def save():
         else:
             # Updating old data
             data.update(new_data)
-
             with open("data.json", "w") as data_file:
                 # Saving updated data
                 json.dump(data, data_file, indent=4)
         finally:
-
-
             website_entry.delete(0,END)
             password_entry.delete(0,END)
 
 
-# Search Function
+# ---------------------------- Search Function ---------------------------- 
 
 def find_password():
     website = website_entry.get()
@@ -95,7 +92,7 @@ canvas.grid(column=1, row=0)
 
 
 
-# Labels
+# ---------------------------- Labels ----------------------------
 website_label = Label(text="Website:")
 website_label.grid(row=1, column=0)
 email_label = Label(text="Email/Username:")
@@ -104,7 +101,7 @@ password_label = Label(text="Password:")
 password_label.grid(row=3, column=0)
 
 
-# Entries
+# ---------------------------- Entries ----------------------------
 website_entry = Entry(width=18)
 website_entry.grid(row=1, column=1)
 website_entry.focus()
@@ -114,7 +111,7 @@ email_entry.insert(0, "ertug.tatar@gmail.com")
 password_entry = Entry(width=18)
 password_entry.grid(row=3, column=1)
 
-# Buttons
+# ---------------------------- Buttons ----------------------------
 generate_password_button = Button(text="Generate Password", command=generate_password)
 generate_password_button.grid(row=3, column=2)
 add_button = Button(text="Add", width=36, command=save)
